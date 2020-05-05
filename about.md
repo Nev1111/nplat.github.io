@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Data driven Auditor
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+There are 10 kinds of people in this world. Those who understand binary and those who don’t..
 
 ### Contact me
 
