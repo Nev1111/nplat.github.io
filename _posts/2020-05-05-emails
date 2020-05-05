@@ -1,0 +1,180 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Nev1111 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+Nev1111
+/
+email_analytics
+Private
+1
+00
+ Code
+ Issues 0
+ Pull requests 0 Actions
+ Projects 0
+ Security 0
+ Insights
+ Settings
+email_analytics
+/
+Email_analytics .md
+ 
+
+1
+```python
+2
+import pyodbc
+3
+import pandas as pd
+4
+​
+5
+cnxn = pyodbc.connect("Driver={SQL Server};"
+6
+                      "Server=APRDASPEN3\ASPEN;"
+7
+                      "Database=ASPEN;"
+8
+                      "Trusted_Connection=yes;")
+9
+```
+10
+​
+11
+SGT_PERSON_EMAIL - This table stores emails associated with the person identified in SGT_PERSON. 
+12
+This includes the types of email and the preferred email to be contacted. 
+13
+One person may have one or more emails. 
+14
+​
+15
+​
+16
+```python
+17
+emails_10=pd.read_sql_query('select top 10 * from ASPEN.SGT_PERSON_EMAIL', cnxn)
+18
+```
+19
+​
+20
+​
+21
+```python
+22
+emails=pd.read_sql_query('select * from ASPEN.SGT_PERSON_EMAIL', cnxn)
+23
+```
+24
+​
+25
+​
+26
+```python
+27
+emails.count()
+28
+```
+29
+​
+30
+​
+31
+​
+32
+​
+33
+    PERSON_EMAIL_ID         470649
+34
+    PERSON_ID               470649
+35
+    EMAIL_TYPE_ID           470649
+36
+    EMAIL_TYPE_VALUE        470649
+37
+    EMAIL_ADDRESS           469503
+38
+    CREATED_BY              470649
+39
+    CREATED_DATE            470649
+40
+    MODIFIED_BY             470649
+41
+    MODIFIED_DATE           470649
+42
+    UPDATE_SEQ              470649
+43
+    PROCESS_INSTANCE_ID     134795
+44
+    LAST_VERIFIED_DATE      457214
+45
+    EFFECTIVE_DATE          470649
+46
+    ACTIVITY_INSTANCE_ID    154980
+47
+    dtype: int64
+48
+​
+49
+​
+50
+​
+51
+Count number of records with a  NULL 'EMAIL_ADDRESS' field
+52
+​
+53
+​
+54
+```python
+55
+emails['PERSON_EMAIL_ID'].count()-emails['EMAIL_ADDRESS'].count()
+56
+```
+57
+​
+58
+​
+59
+​
+60
+​
+61
+    1146
+62
+​
+63
+​
+64
+​
+@Nev1111
+Commit changes
+Commit summary
+Update Email_analytics .md
+Optional extended description
+Add an optional extended description…
+ Commit directly to the master branch.
+ Create a new branch for this commit and start a pull request. Learn more about pull requests.
+ 
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
