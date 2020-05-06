@@ -1,0 +1,6 @@
+### What is Python and why is it so important in the world of data analytics within Internal Audit?
+Over the past few years, data analytics has become a game changer in the Internal Audit profession.  The need for swifter detection of anomalies, red flags for fraud and other indicators of problems with internal controls has set new expectations for those working in Internal Audit. 
+The use of Python, and its packages like “pandas” has become extremely popular in performing data analytics. Pandas is used for everything from importing data from Excel spreadsheets to manipulating this data by shaping, re-shaping, performing complex merges and visually representing the resulting outcomes. Python is also comprised of other “packages” that can be used in conjunction with “pandas” to build predictive data models, convert unstructured data (ex: data contained in PDF documents) into structured workable “excel” sheets or dataframes. It is also “open-source” which means it’s free and it is also supported by a large global network of users, which makes it really easy to find an answer and a solution to almost every problem. 
+To sum it up, it is a very valuable tool of a data analyst’s tool box.  For information on how to download Python and begin using it, visit this website:
+Anaconda.com
+
