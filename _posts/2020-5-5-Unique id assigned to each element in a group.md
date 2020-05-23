@@ -1,6 +1,3 @@
-### Assign an id that is unique to each element in a group
-
-
 ```python
 import pandas as pd
 ```
