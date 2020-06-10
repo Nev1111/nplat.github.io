@@ -1,27 +1,19 @@
 Convert trial balance report from a legacy system to excel
-
-
 ```python
 #Import libraries
 ```
-
-
 ```python
 import pandas as pd
 import numpy as np
 ```
-
-
 ```python
-#Copy and paste contents from Macola text file into an excel sheet
+#Copy and paste contents from the legacy system in the form of a text file into an excel sheet
 #Insert a "header" line at the top of the file and name it "description" (At this point all contents of the TB 
 #raw file should be contained in a single column of an excel document (column "A") called "description" )
 
 #Read the excel file from its saved location and save to a variable (dataframe)
-tb=pd.read_excel('G:/Accounting/Banking/Bank/Procedures/Nevena - Financial reporting/TB/DATA-800.xlsx')
+tb=pd.read_excel('insert file_path/directory')
 ```
-
-
 ```python
 #The following lines of code transform the Macola file into separate columns and drops all unnecessary lines
 tb[['Account_num','Account_desc']]=tb['description'].str.extract('(\d{7}\-\d{2}\-\d{6})\s+(.*)')
@@ -36,8 +28,6 @@ tb_=tb_.join(tb_1)
 tb_=tb_.drop(['Account_total','description'],axis=1)
 tb_=tb_.drop_duplicates()
 ```
-
-
 ```python
 #Convert balances ending with 'CR' to negative values and sum each column to ensure balances are correct
 mask = tb_['Beg_bal'].str.endswith('CR')
@@ -69,15 +59,10 @@ tb_.loc[mask, 'Ending_bal'] = '-' + tb_.loc[mask, 'Ending_bal'].str[:-2]
 tb_['Ending_bal']=tb_['Ending_bal'].str.replace(',','')
 tb_['Ending_bal']=tb_['Ending_bal'].astype(float)
 sum=tb_['Ending_bal'].sum()   
-
 ```
-
-
 ```python
 #Save resulting file back to a directory
 ```
-
-
 ```python
-tb_.to_excel('G:/Accounting/Banking/Bank/Procedures/Nevena - Financial reporting/TB/DATA-800.xlsx',sheet_name='TB')
+tb_.to_excel('insert file path/directory')
 ```
