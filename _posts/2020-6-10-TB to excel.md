@@ -1,4 +1,4 @@
-Convert Macola TB to excel
+Convert trial balance report from a legacy system to excel
 
 
 ```python
