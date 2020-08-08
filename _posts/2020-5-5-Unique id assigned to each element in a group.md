@@ -1,4 +1,4 @@
-### Assign an id that is unique to each element in a group
+### Assign an id that is unique to each element in a group-When would this technique be useful? If the elements in the data set are account balances derived from a general ledger, using this technique would combine unique balances or (absolute values of balances) into individual groups, allowing for ins and outs (debits and credits) to be easily and spotted and visualized.
 
 
 ```python
